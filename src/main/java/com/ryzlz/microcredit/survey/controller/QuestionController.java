@@ -8,6 +8,7 @@ import com.ryzlz.microcredit.survey.dto.QuestionnaireTemplate;
 import com.ryzlz.microcredit.survey.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -46,8 +47,8 @@ public class QuestionController {
 
 
     //提交问卷模板
-    @PostMapping("/questionnaireTemplate")
-    public ResponseData insertQuestionnaireTemplate(QuestionnaireTemplate questionnaireTemplate){
+    @PostMapping("/insertQuestionnaireTemplate")
+    public ResponseData insertQuestionnaireTemplate(@RequestBody QuestionnaireTemplate questionnaireTemplate){
         ResponseData responseData = new ResponseData();
         responseData.setResult(Result.Success);
 
@@ -55,8 +56,6 @@ public class QuestionController {
 
         return responseData;
     }
-
-
 
 //    //修改问卷
 //    void updataQuestionnaire(Questionnaire questionnaire);

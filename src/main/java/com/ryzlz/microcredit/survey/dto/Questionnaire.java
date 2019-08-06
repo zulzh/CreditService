@@ -1,7 +1,10 @@
 package com.ryzlz.microcredit.survey.dto;
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class Questionnaire {
 
     private String id;
