@@ -7,10 +7,7 @@ import com.ryzlz.microcredit.survey.dto.Questionnaire;
 import com.ryzlz.microcredit.survey.dto.QuestionnaireTemplate;
 import com.ryzlz.microcredit.survey.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,7 +24,7 @@ public class QuestionController {
 
     //根据问卷ID 取得问卷
     @PostMapping("/getQuestionnaireTemplate")
-    public ResponseData getQuestionnaireTemplate(String questionnaireTemplateId){
+    public ResponseData getQuestionnaireTemplate(@RequestParam("id") String questionnaireTemplateId){
         ResponseData responseData = new ResponseData();
         responseData.setResult(Result.Success);
         responseData.setData(questionService.getQuestionnaireTemplate(questionnaireTemplateId));

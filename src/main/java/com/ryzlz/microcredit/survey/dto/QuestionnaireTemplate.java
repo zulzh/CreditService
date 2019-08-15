@@ -7,7 +7,7 @@ import java.util.List;
 @Data
 public class QuestionnaireTemplate {
 
-    private String id;
+    private String _id;
     //主标题
     private String title;
     //描述

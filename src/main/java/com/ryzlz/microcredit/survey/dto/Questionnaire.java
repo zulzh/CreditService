@@ -7,7 +7,7 @@ import java.util.List;
 @Data
 public class Questionnaire {
 
-    private String id;
+    private String _id;
     //用户ID
     private Integer userid;
 
